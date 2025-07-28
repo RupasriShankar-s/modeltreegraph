@@ -1,4 +1,9 @@
+import os
 import streamlit as st
+
+# Ensure Graphviz binary is discoverable
+os.environ["PATH"] += os.pathsep + '/usr/bin'
+
 from graphviz import Digraph
 
 st.set_page_config(page_title="Model Tree Generator", layout="centered")
